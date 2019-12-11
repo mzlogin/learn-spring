@@ -15,3 +15,8 @@ dependency-reduced-pom.xml
 README.html
 *.iml
 .idea
+
+.mvn/
+mvnw
+mvnw.cmd
+
