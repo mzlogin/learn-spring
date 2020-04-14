@@ -1,9 +1,11 @@
 package org.mazhuang.webcontenttest;
 
 import lombok.Data;
+import org.springframework.lang.Nullable;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 /**
  * author: mazhuang
@@ -20,6 +22,15 @@ public class ValidTestParam {
      */
     @Valid
     private ParamProperties properties;
+
+    /**
+     * 1。 propertiesList 可以为 null
+     * 2. propertiesList 可以为 empty
+     * 3. 否则 propertiesList 里的元素的属性值会被校验
+     */
+    @Nullable
+    @Valid
+    private List<ParamProperties> propertiesList;
 
     @Data
     public static class ParamProperties {
