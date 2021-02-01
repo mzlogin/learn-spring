@@ -16,7 +16,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Slf4j
+/**
+ * @author mazhuang
+ */
 @RestController
 public class UrlDecodeController {
 
@@ -39,8 +41,6 @@ public class UrlDecodeController {
 
         // 这种写法获取到的是原始参数，不会被 UrlDecode
         String msgFromQueryString = getQueryParameter(request.getQueryString(), PARAM_MSG);
-
-        log.info("msgFromParameter.equals(URLDecoder.decode(msgFromQueryString, \"utf-8\") result: {}", msgFromParameter.equals(URLDecoder.decode(msgFromQueryString, "utf-8")));
 
         StringBuilder result = new StringBuilder()
                 .append("msg from @RequestParam: <br>")
