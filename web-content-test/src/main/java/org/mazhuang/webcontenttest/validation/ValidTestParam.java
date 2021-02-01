@@ -1,4 +1,4 @@
-package org.mazhuang.webcontenttest;
+package org.mazhuang.webcontenttest.validation;
 
 import lombok.Data;
 import org.springframework.lang.Nullable;
