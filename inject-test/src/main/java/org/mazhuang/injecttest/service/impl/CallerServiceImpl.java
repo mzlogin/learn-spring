@@ -19,8 +19,8 @@ public class CallerServiceImpl implements CallerService {
     // Case 1: Resource + 不指定 name 和 type + 不匹配 Bean name 的变量名
     // 运行结果：异常
     // Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.mazhuang.injecttest.service.CalleeService' available: expected single matching bean but found 2: callee1ServiceImpl,callee2ServiceImpl
-//    @Resource
-//    private CalleeService calleeService;
+    @Resource
+    private CalleeService calleeService;
 
     // Case 2: Resource + 不指定 name 和 type + 匹配 Bean name 的变量名
     // 运行结果：正常，按变量名匹配的 Bean 进行注入
