@@ -20,7 +20,9 @@
 		"scope": "ftl",
 		"prefix": "layout:page",
 		"body": [
-			"<#import \"./layout/page_layout.ftl\" as base>",
+			"<#import \"./layout/page.ftl\" as base>",
+			"",
+			"<#assign title=\"$1\">",
 			"",
 			"<#assign body>",
 			"",
@@ -36,7 +38,7 @@
 			"",
 			"</#assign>",
 			"",
-			"<@base.layout body=body js=js />"
+			"<@base.layout title=title body=body js=js />"
 		],
 		"description": "Page layout template for FTL files"
 	},

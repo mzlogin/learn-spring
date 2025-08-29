@@ -1,21 +1,21 @@
 <#import "./layout/page.ftl" as base>
 
-<#assign title="Test Page">
+<#assign title="测试页面">
 
 <#assign body>
 
-<p>Hello, <span id="name">World</span>!</p>
+    <p>欢迎来到${title}！</p>
+    <p>当前时间：<span id="current-time"></span></p>
 
 </#assign>
 
 <#assign js>
 
 <script>
-    // Freemarker 和 World 来回切换，时间间隔 1 秒
-    setInterval(function() {
-        var nameElement = document.getElementById("name");
-        nameElement.innerText = nameElement.innerText === "Freemarker" ? "World" : "Freemarker";
-    }, 1000);
+// 每隔一秒刷新当前时间
+setInterval(function() {
+    document.getElementById("current-time").innerHTML = new Date().toLocaleString();
+}, 1000);
 </script>
 
 </#assign>
