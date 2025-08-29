@@ -1,11 +1,9 @@
 <#import "./layout/page.ftl" as base>
 
-<#assign title="测试页面">
-
 <#assign body>
 
-    <p>欢迎来到${title}！</p>
-    <p>当前时间：<span id="current-time"></span></p>
+<p>我是页面内容</p>
+<p>当前时间：<span id="current-time">${.now?string("yyyy-MM-dd HH:mm:ss")}</span></p>
 
 </#assign>
 
@@ -20,4 +18,4 @@ setInterval(function() {
 
 </#assign>
 
-<@base.layout title=title body=body js=js />
+<@base.layout body=body js=js />

@@ -1,13 +1,11 @@
-<#macro layout title body js="">
+<#macro layout body js="">
 
 <#include "../includes/header.ftl" />
 
 ${body}
 
-</body>
+<#include "../includes/footer.ftl" />
 
 ${js}
-
-<#include "../includes/footer.ftl" />
 
 </#macro>

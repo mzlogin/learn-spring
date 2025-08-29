@@ -1,7 +1,1 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>${title}</title>
-</head>
-<body>
+<p>我来组成头部</p>
