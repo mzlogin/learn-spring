@@ -1,6 +1,6 @@
 <#macro layout title body js="">
 
-<#include "../includes/head.ftl" />
+<#include "../includes/header.ftl" />
 
 ${body}
 
@@ -8,6 +8,6 @@ ${body}
 
 ${js}
 
-<#include "../includes/foot.ftl" />
+<#include "../includes/footer.ftl" />
 
 </#macro>
